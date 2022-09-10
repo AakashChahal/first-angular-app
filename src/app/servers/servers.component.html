@@ -1,0 +1,13 @@
+<div class="text-center">
+    <button
+        class="btn btn-primary"
+        [disabled]="!allowNewServer"
+        (click)="buttonClicked()"
+    >
+        Click Button
+    </button>
+    <p>{{ message }}</p>
+
+    <app-server></app-server>
+    <app-server></app-server>
+</div>
