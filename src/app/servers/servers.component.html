@@ -5,6 +5,7 @@
         class="form-control"
         (input)="onServerNameUpdate($event)"
     />
+    <input type="text" class="form-control" [(ngModel)]="serverName" />
     <p>{{ serverName }}</p>
     <button
         class="btn btn-primary"
