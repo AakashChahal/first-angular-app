@@ -10,6 +10,7 @@ export class ServersComponent implements OnInit {
     numClicks = 0;
     message = 'button not clicked yet';
     serverName = '';
+    serverCreated = false;
 
     constructor() {
         setTimeout(() => (this.allowNewServer = true), 2000);
@@ -18,6 +19,7 @@ export class ServersComponent implements OnInit {
     ngOnInit(): void {}
 
     buttonClicked() {
+        this.serverCreated = true;
         this.numClicks += 1;
         this.message = `button clicked ${this.numClicks} times`;
     }
