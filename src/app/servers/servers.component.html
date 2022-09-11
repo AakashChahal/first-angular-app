@@ -16,11 +16,9 @@
     <p *ngIf="serverCreated; else noServer">
         New server "{{ serverName }}" is created
     </p>
+    <app-server *ngFor="let server of servers"></app-server>
     <ng-template #noServer>
         <p>No server created yet.</p>
     </ng-template>
     <!-- <p>{{ message }}</p> -->
-
-    <app-server></app-server>
-    <app-server></app-server>
 </div>

@@ -11,6 +11,7 @@ export class ServersComponent implements OnInit {
     message = 'button not clicked yet';
     serverName = '';
     serverCreated = false;
+    servers = ['TestServer 1', 'Test Server 2'];
 
     constructor() {
         setTimeout(() => (this.allowNewServer = true), 2000);
@@ -20,6 +21,7 @@ export class ServersComponent implements OnInit {
 
     buttonClicked() {
         this.serverCreated = true;
+        this.servers.push(this.serverName);
         this.numClicks += 1;
         this.message = `button clicked ${this.numClicks} times`;
     }
