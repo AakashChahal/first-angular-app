@@ -2,4 +2,13 @@
     <h1 class="text-center text-primary">In App Component</h1>
     <hr />
     <app-servers></app-servers>
+    <hr />
+    <h1 class="text-center text-secondary card-title">GameControl</h1>
+    <app-game-control
+        (gameStarted)="startGame($event)"
+        (gameStopped)="stopGame()"
+    >
+    </app-game-control>
+    <app-even *ngIf="count > 0 && count % 2 == 0"></app-even>
+    <app-odd *ngIf="count > 0 && !(count % 2 == 0)"></app-odd>
 </body>
