@@ -9,8 +9,10 @@
         (gameStopped)="stopGame()"
     >
     </app-game-control>
-    <app-even *ngIf="count > 0 && count % 2 == 0"></app-even>
-    <app-odd *appUnless="count > 0 && count % 2 == 0"></app-odd>
+    <div *ngFor="let num of numbers">
+        <app-even *ngIf="num > 0 && num % 2 == 0" [number]="num"></app-even>
+        <app-odd *appUnless="num > 0 && num % 2 == 0" [number]="num"></app-odd>
+    </div>
     <p appBasicHighlight>this is using the basic directive.</p>
     <p appBetterHighlightDirective>this is using the new directive.</p>
 </body>

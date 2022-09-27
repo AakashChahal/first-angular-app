@@ -9,10 +9,11 @@ export class AppComponent {
     bgclr = '';
     count = 0;
     game;
+    numbers: number[] = [];
     startGame(data: { evenNumber: boolean }) {
         this.game = setInterval(() => {
             this.count++;
-            console.log(this.count);
+            this.numbers.push(this.count);
         }, 1000);
     }
     stopGame() {
